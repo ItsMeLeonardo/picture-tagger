@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  position: relative;
+  cursor: none;
+  /* height: 300px;
+  aspect-ratio: 16/9; */
+  background: #d6d6d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+.canvas {
+  height: 100%;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  background-color: #7f00ff;
+  z-index: 1;
+  border-radius: 50%;
+  border-bottom-left-radius: 0;
+  pointer-events: none;
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  aspect-ratio: 1;
+  width: 20px;
+  background-color: #000;
+  border: solid 2px #fff;
+  z-index: 100000;
+  border-radius: 50%;
+  border-bottom-left-radius: 0.125rem;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.tag-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: white;
+  padding: 0.35rem 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05), 0 0.5rem 1rem rgba(0, 0, 0, 0.01);
+}
+
+/* .tag-form:focus-within {
+  outline: 2px solid #7f00ff;
+  outline-offset: 2px;
+} */
+
+.tag-input {
+  font-size: 0.8rem;
+  border: none;
+  outline: none;
+}
+
+.tag-submit {
+  background: #7f00ff;
+  color: white;
+  font-size: 0.8rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  width: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.tab-marker-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tab-marker-button-container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: white;
+  border-radius: 999px;
+  border-bottom-left-radius: 0.125rem;
+  padding: 0.25rem;
+  height: 2.75rem;
+  width: 2.75rem;
+  transition: box-shadow 0.2s ease-in-out, width 0.2s ease-in-out;
+  cursor: auto;
+}
+
+.tab-marker-button-container:hover,
+.tab-marker-button-container:focus,
+.tab-marker-button-container:focus-within {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05), 0 0.5rem 1rem rgba(0, 0, 0, 0.01);
+  width: 200px;
+}
+
+.tag-marker-button {
+  height: 100%;
+  aspect-ratio: 1;
+  background-color: white;
+  padding: 0;
+  border-radius: 50%;
+  color: #ff3b5e;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.tag-marker-button:hover {
+  color: white;
+  background-color: #ff3b5e;
+}
+
+.tag-marker-picture {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-marker-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.tag-marker-text {
+  font-size: 0.85rem;
+  line-height: 1.1;
+  line-clamp: 2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
